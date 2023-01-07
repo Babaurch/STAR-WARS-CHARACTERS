@@ -101,112 +101,13 @@
        };
   }
 
-
- // Create the pagination controls
-//  fetch('https://swapi.dev/api/people?page=1')
-//  .then(response => response.json())
-//  .then(data => {
-//    // Extract metadata from the response
-//    const { count, next, previous } = data;
-//    const totalPages = Math.ceil(count / 10);  // 10 items per page
- 
-//    // Create the pagination controls
-//    const paginationControls = document.createElement('div');
-//    paginationControls.innerHTML = `
-//      ${previous ? `<button class="prev">Prev</button>` : ''}
-//      <ul class="pages">
-//        ${[...Array(totalPages)].map((_, i) => `
-//          <li class="page-item">
-//            <a class="page-link" href="#" data-page=${i + 1}>${i + 1}</a>
-//          </li>
-//        `).join('')}
-//      </ul>
-//      ${next ? `<button class="next">Next</button>` : ''}
-//    `;
- 
-//    // Append the pagination controls to the page
-//    document.getElementById("pagination-controls").appendChild(paginationControls);
- 
-//    if (previous) {
-//      paginationControls.querySelector('.prev').addEventListener('click', handlePrevClick);
-//    }
-//    if (next) {
-//     paginationControls.querySelector('.next').addEventListener('click', handleNextClick);
-//    }
-//    paginationControls.querySelectorAll('.page-link').forEach(link => {
-//      link.addEventListener('click', handlePageClick);
-//    });
- 
-//    // Update the UI to display the first page of data
-//    updateUI(data.results);
-//  });
-
-
-//  function handlePageClick(e) {
-//     // Prevent the default click behavior
-//     e.preventDefault();
-
-//     // Get the page number from the clicked element
-//     const page = e.target.dataset.page;
-
-//     // Make a new API request to retrieve the specified page of data
-//     fetch(`https://swapi.dev/api/people?page=${page}`)
-//     .then(response => response.json())
-//     .then(data => {
-//       // Update the metadata
-//       const { count, next, previous } = data;
-//       const totalPages = Math.ceil(count / 10);  // 10 items per page
-
-//       // Update the pagination controls
-//       updatePaginationControls(totalPages, nextPageUrl, prevPageUrl)
-
-//       // Update the UI to display the new data
-//       updateUI(data.results);
-//     });
-//   };
-
-
-// function handleNextClick(e) {
-//     e.preventDefault();
-//   // Make a new API request to retrieve the next page of data
-//   fetch('https://swapi.dev/api/people?page=1')  // `next` is the URL of the next page
-//     .then(response => response.json())
-//     .then(data => {
-//       // Update the metadata
-//       const { count, next, previous } = data;
-//       const totalPages = Math.ceil(count / 10);  // 10 items per page
-
-//       //totalPages = data.count;
-//       nextPageUrl = data.next;
-//       prevPageUrl = data.previous;
-      
-//       fetch(nextPageUrl)
-//       .then(response => response.json())
-//       .then(data => {
-
-//         const { count, next, previous } = data;
-//         const totalPages = Math.ceil(count / 10);
-
-//         nextPageUrl = data.next;
-//         prevPageUrl = data.previous;
-
-//         updateUI(data.results);  
-//       });
-//       // Update the pagination controls
-//       //updatePaginationControls(totalPages, next, previous);
-
-//       // Update the UI to display the new data
-//       //updateUI(data.results);
-//     });
-// }
-
-////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////
          // Create the pagination controls//
 ///////////////////////////////////////////////////////////
-let currentPage = 1;
-let totalPages;
-let nextPageUrl;
-let prevPageUrl;
+  let currentPage = 1;
+  let totalPages;
+  let nextPageUrl;
+  let prevPageUrl;
 
 function paginateResults(page) {
   currentPage = page;

@@ -128,62 +128,62 @@ body {
   
   /* Style the Pagination Controls */
   .pagination-controls {
-    display: flex; /* Display the pagination controls as a flex container */
-    justify-content: center; /* Center the pagination controls horizontally */
-    align-items: center; /* Center the pagination controls vertically */
-    margin: 20px 0; /* Add some space above and below the pagination controls */
-    position: fixed; /*Make the pagination control fixed*/
-    bottom: 0; /* Align the pagination control to the bottom of the page */
-    left: 0; /* Align the pagination control to the left of the page */
-    right: 0; /* Align the pagination control to the right of the page */
-    background-color: rgb(172, 185, 187); /* Add a background color to the pagination control */
-    padding: 10px; /* Add some padding to the pagination control */
-    border-top: 1px solid rgb(26, 22, 22); /* Add a border to the top of the pagination control */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin: 20px 0; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: rgb(172, 185, 187); 
+    padding: 10px; 
+    border-top: 1px solid rgb(26, 22, 22); 
   }
   
   .pagination-controls a {
-    display: inline-block; /* Display the page links as inline blocks */
-    width: 30px; /* Set the width of the page links */
-    height: 30px; /* Set the height of the page links */
-    line-height: 30px; /* Vertically center the text within the page links */
-    text-align: center; /* Center the text within the page links horizontally */
-    border: 1px solid black; /* Add a border to the page links */
-    border-radius: 3px; /* Round the corners of the page links */
-    margin: 0 5px; /* Add some space between the page links */
-    color: black; /* Set the color of the page links */
-    text-decoration: none; /* Remove the default underline from the page links */
+    display: inline-block; 
+    width: 30px; 
+    height: 30px; 
+    line-height: 30px; 
+    text-align: center; 
+    border: 1px solid black; 
+    border-radius: 3px; 
+    margin: 0 5px; 
+    color: black; 
+    text-decoration: none; 
   }
   
   .pagination-controls a:hover {
-    background-color: rgb(27, 59, 117); /* Change the background color of the page links on hover */
+    background-color: rgb(27, 59, 117); 
     color: #fff;
   }
   
   .pagination-controls .a .[page-link="${currentPage}"] {
-    background-color: #333; /* Change the background color of the current page link */
-    color: rgb(36, 102, 201); /* Change the color of the text in the current page link */
+    background-color: #333; 
+    color: rgb(36, 102, 201); 
   }
   
   .pagination-controls button{
-    display: inline-block; /* Display the button as an inline block */
-    width: 60px; /* Set the width of the button */
-    height: 33px; /* Set the height of the button */
-    line-height: 30px; /* Vertically center the text within the button */
-    text-align: center; /* Center the text within the button horizontally */
-    border: 1px solid #ccc; /* Add a border to the button */
-    border-radius: 3px; /* Round the corners of the button */
-    background-color: rgb(27, 59, 117); /*Set the background color of the button */
-    color: white; /* Set the color of the text in the button */
-    text-decoration: none; /* Remove the default underline from the button */
-    cursor: pointer; /* Change the cursor to a pointer when the button is hovered */
+    display: inline-block; 
+    width: 60px;
+    height: 33px; 
+    line-height: 30px; 
+    text-align: center; 
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+    background-color: rgb(27, 59, 117); 
+    color: white; 
+    text-decoration: none; 
+    cursor: pointer; 
   }
 
   .pagination-controls button:hover {
-    background-color: #fff; /* Change the background color of the button on hover */
+    background-color: #fff; 
     color: rgb(4, 32, 83);;
   }
 
   .pagination-controls button:disabled {
-    opacity: 0.5; /* Reduce the opacity of the button when it is disabled */
-    cursor: default; /* Change the cursor back to the default when the button is disabled */
+    opacity: 0.5; 
+    cursor: default; 
   }

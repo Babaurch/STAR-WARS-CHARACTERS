@@ -1,0 +1,189 @@
+body {
+    background-image: url(/img/Nav\ Pic.jpg);
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.534);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    /* font-family: sans-serif; */
+    /* background-color: rgb(27, 59, 117); */
+    /* background: linear-gradient(45deg, #0a1869, #040280) */
+  }
+  
+  #character-section {
+    /* background-image: url(/img/download.png);
+    background-position: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    color: blue;
+    background-color: rgb(172, 185, 187);
+    opacity: 0.7;
+    
+  }
+
+
+  #container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    /* grid-template-rows: 100px 200px; Define two rows with fixed heights */
+    grid-gap: 20px;
+  }
+
+  #container .character{
+    margin: 7px;
+
+  }
+
+  #container .character .image{
+    text-align: center;
+    cursor: pointer;
+  }
+
+  #container .character .image img{
+    border-radius: 5px;
+    width: 75%;
+    height: 75%;
+  }
+
+  #container .character .name{
+    text-align: center;
+
+  }
+
+  #container .character .name button{
+    padding: 0.5em;
+    border-radius: 50px;  
+    cursor: pointer;
+  }
+
+  .popup{
+    width: 400px;
+    background: rgb(172, 185, 187);;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+  .open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+  }
+
+  .popup .card .header{
+    font-size: 28px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+    color: rgb(27, 59, 117);
+    font: bold;
+  }
+
+  .popup .btn{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: rgb(27, 59, 117);
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .loading {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; 
+    text-align: center; 
+    color: #000;
+  }
+  
+  .loading img {
+    width: 300px; 
+    height: 300px; 
+  }
+  
+  .loading p {
+    font-size: 16px; 
+    color: #fff; 
+    margin-top: 10px; 
+  }
+  
+  /* Style the Pagination Controls */
+  .pagination-controls {
+    display: flex; /* Display the pagination controls as a flex container */
+    justify-content: center; /* Center the pagination controls horizontally */
+    align-items: center; /* Center the pagination controls vertically */
+    margin: 20px 0; /* Add some space above and below the pagination controls */
+    position: fixed; /*Make the pagination control fixed*/
+    bottom: 0; /* Align the pagination control to the bottom of the page */
+    left: 0; /* Align the pagination control to the left of the page */
+    right: 0; /* Align the pagination control to the right of the page */
+    background-color: rgb(172, 185, 187); /* Add a background color to the pagination control */
+    padding: 10px; /* Add some padding to the pagination control */
+    border-top: 1px solid rgb(26, 22, 22); /* Add a border to the top of the pagination control */
+  }
+  
+  .pagination-controls a {
+    display: inline-block; /* Display the page links as inline blocks */
+    width: 30px; /* Set the width of the page links */
+    height: 30px; /* Set the height of the page links */
+    line-height: 30px; /* Vertically center the text within the page links */
+    text-align: center; /* Center the text within the page links horizontally */
+    border: 1px solid black; /* Add a border to the page links */
+    border-radius: 3px; /* Round the corners of the page links */
+    margin: 0 5px; /* Add some space between the page links */
+    color: black; /* Set the color of the page links */
+    text-decoration: none; /* Remove the default underline from the page links */
+  }
+  
+  .pagination-controls a:hover {
+    background-color: rgb(27, 59, 117); /* Change the background color of the page links on hover */
+    color: #fff;
+  }
+  
+  .pagination-controls .a .[page-link="${currentPage}"] {
+    background-color: #333; /* Change the background color of the current page link */
+    color: rgb(36, 102, 201); /* Change the color of the text in the current page link */
+  }
+  
+  .pagination-controls button{
+    display: inline-block; /* Display the button as an inline block */
+    width: 60px; /* Set the width of the button */
+    height: 33px; /* Set the height of the button */
+    line-height: 30px; /* Vertically center the text within the button */
+    text-align: center; /* Center the text within the button horizontally */
+    border: 1px solid #ccc; /* Add a border to the button */
+    border-radius: 3px; /* Round the corners of the button */
+    background-color: rgb(27, 59, 117); /*Set the background color of the button */
+    color: white; /* Set the color of the text in the button */
+    text-decoration: none; /* Remove the default underline from the button */
+    cursor: pointer; /* Change the cursor to a pointer when the button is hovered */
+  }
+
+  .pagination-controls button:hover {
+    background-color: #fff; /* Change the background color of the button on hover */
+    color: rgb(4, 32, 83);;
+  }
+
+  .pagination-controls button:disabled {
+    opacity: 0.5; /* Reduce the opacity of the button when it is disabled */
+    cursor: default; /* Change the cursor back to the default when the button is disabled */
+  }

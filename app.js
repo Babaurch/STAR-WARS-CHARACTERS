@@ -1,7 +1,7 @@
 //function fetchPeople() {
     // Make a GET request to the API
     fetch('https://swapi.dev/api/people')
-      .then(response => response.json()) // Parse the response as JSON
+      .then(response => response.json()) 
       .then(data => {
         // Get the list of people from the data
         const people = data.results;
@@ -37,7 +37,7 @@
               <p>Height: ${person.height}</p>
             `;
             userList.appendChild(detailsElement);
-            //document.body.appendChild(detailsElement);
+            
           });
           // Add the list item to the list of people
           document.getElementById('container').appendChild(liElement);
@@ -95,7 +95,7 @@
           <p>Height: ${person.height}</p>
         `;
         userList.appendChild(detailsElement);
-        //document.body.appendChild(detailsElement);
+        
         });
         userUpdate.appendChild(liElement);
        };
@@ -161,6 +161,10 @@ function updatePaginationControls(totalPages, nextPageUrl, prevPageUrl) {
     pageLink.addEventListener('click', () => paginateResults(i));
     paginationControls.appendChild(pageLink);
   }
+  const pageLink = document.querySelector(`.page-link[data-page='${currentPage}']`);
+  if (pageLink.getAttribute('data-page') == currentPage) {
+    pageLink.classList.add('current');
+  }
     
       // Create a "Next" button if there is a next page
       if (nextPageUrl) {
@@ -171,20 +175,7 @@ function updatePaginationControls(totalPages, nextPageUrl, prevPageUrl) {
         paginationControls.appendChild(nextButton);
       }
 }
-    
-    // Initialize the pagination controls
-    // paginateResults(1);
-    
+       
     const paginationControls = document.createElement('div');
     const parentElement = document.getElementById("pagination-controls");
     parentElement.appendChild(paginationControls);
-
-    const currentPageLink = document.querySelector(`[page-link="${currentPage}"]`);
-    currentPageLink.classList.add('current');
-    
-    
-    // document.addEventListener('DOMContentLoaded', () => {
-    // const currentPageLink = paginationControls.querySelector(`[pageLink="${currentPage}"]`);
-    // currentPageLink.style.color = 'red';
-    // currentPageLink.classList.add('current');
-    // });

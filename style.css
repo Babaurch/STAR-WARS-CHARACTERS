@@ -7,14 +7,9 @@ body {
     background-color: rgba(0, 0, 0, 0.534);
     background-blend-mode: multiply;
     background-repeat: no-repeat;
-    /* font-family: sans-serif; */
-    /* background-color: rgb(27, 59, 117); */
-    /* background: linear-gradient(45deg, #0a1869, #040280) */
   }
   
   #character-section {
-    /* background-image: url(/img/download.png);
-    background-position: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +17,6 @@ body {
     color: blue;
     background-color: rgb(172, 185, 187);
     opacity: 0.7;
-    
   }
 
 
@@ -32,13 +26,11 @@ body {
     padding: 10px;
     display: grid; 
     grid-template-columns: repeat(5, 1fr); 
-    /* grid-template-rows: 100px 200px; Define two rows with fixed heights */
     grid-gap: 20px;
   }
 
   #container .character{
     margin: 7px;
-
   }
 
   #container .character .image{
@@ -54,7 +46,6 @@ body {
 
   #container .character .name{
     text-align: center;
-
   }
 
   #container .character .name button{
@@ -159,9 +150,9 @@ body {
     color: #fff;
   }
   
-  .pagination-controls .a .[page-link="${currentPage}"] {
-    background-color: #333; 
-    color: rgb(36, 102, 201); 
+  .pagination-controls .current {
+    background-color: rgb(27, 59, 117); 
+    color: #fff 
   }
   
   .pagination-controls button{
